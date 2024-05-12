@@ -15,7 +15,7 @@ import {
 
 } from '@chakra-ui/react'
 import io from 'socket.io-client'
-const ENDPOINT = `${window.location.origin}`
+const ENDPOINT = `https://chat-backend-api-vtlb.onrender.com`
 var socket;
 
 import { ChatState } from '../../Context/ChatProvider'
@@ -72,7 +72,7 @@ const GroupChatMadel = ({ children }) => {
                 },
               };
           
-              const { data } = await axios.get(`${window.location.origin}/api/user?search=${search}`, config);
+              const { data } = await axios.get(`https://chat-backend-api-vtlb.onrender.com/api/user?search=${search}`, config);
               setLoading(false);
               setSearchResult(data.data);
         } catch (error) {
@@ -108,7 +108,7 @@ const GroupChatMadel = ({ children }) => {
             },
           };
       
-          const { data } = await axios.post(`${window.location.origin}/api/chat/group`,{
+          const { data } = await axios.post(`https://chat-backend-api-vtlb.onrender.com/api/chat/group`,{
           chatName:groupChatName,
           users:selectedUsers.map((u)=>u._id)
           },config);

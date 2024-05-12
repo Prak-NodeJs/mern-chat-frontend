@@ -63,7 +63,7 @@ const Login = () => {
                 };
 
                 const { data } = await axios.post(
-                    `${window.location.origin}/api/user/login`,
+                    `https://chat-backend-api-vtlb.onrender.com/api/user/login`,
                     { email, password },
                     config
                 );

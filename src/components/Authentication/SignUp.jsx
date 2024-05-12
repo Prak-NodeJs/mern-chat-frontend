@@ -152,7 +152,7 @@ const SignUp = () => {
                 }
 
                 const { data } = await axios.post(
-                    `${window.location.origin}/api/user`,
+                    `https://chat-backend-api-vtlb.onrender.com/api/user`,
                     userData
                 );
 
